@@ -16,3 +16,9 @@ function activarValidaciones() {
 			    						var txtMail = new LiveValidation('txtMail');
 	                            		txtMail.add(Validate.Email);
 }
+	function deseleccionarTodos() {
+		var elem = document.getElementById('frmDatosProspect').elements;
+		for (var i=0; i<elem.length; i++) {
+				elem[i].readOnly = true;
+			}
+	}
