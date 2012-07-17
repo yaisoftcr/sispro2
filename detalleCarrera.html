@@ -27,9 +27,7 @@
 						<ul class="nav"></ul>
 						<ul class="nav pull-right mantenimiento">
 							<li>
-								<a href="#"><i class="icon-wrench icon-white"></i>
-                                Mantenimiento
-                                <b class="caret"></b></a>
+								<a href="#"><i class="icon-wrench icon-white"></i>Mantenimiento<b class="caret"></b></a>
 								<ul class="dropdown-menu"><!--Menu desplegable de mantenimiento-->
 								<li><a href="mantenimientoUsuarios.html"><i class="icon-user"></i> Usuarios</a></li>
 								<li><a href="mantenimientoCarreras.html"><i class="icon-book"></i> Carreras</a></li>
@@ -91,7 +89,7 @@
 						</div>
 					</div>
 					<div class="form-actions">
-						<button type="submit" name="btnActualizarCarrera" id="btnActualizarCarrera" onClick="deseleccionarTodos()" class="btn btn-danger">Actualizar</button>
+						<input type="button" name="btnSalvar" id="btnSalvar" onClick="deseleccionarTodos()" class="btn btn-danger" value="Actualizar">
 					</div>
 				</fieldset>
 			</form>
@@ -102,5 +100,57 @@
   <div id="footerP">
   <hr> <p> Copyright Yaisoft 2012 &copy; </p> 
   </div>
+	
+
+
+<!--
+<div id="globalP">
+        <div id="headerP">
+		</div>
+    	<div id="contentP">
+        <table id="tablaDetalleCarrera">
+        <legend>Detalle de Carrera</legend>
+        <form name="frmCarrera" id="frmCarrera" action"#" method="POST" enctype="TEXT/PLAIN">
+          <tr>
+            <td >Siglas</td>
+            <td ><input type="text" class="input-xlarge" id="txtSiglasCarrera" onClick="editarCampo('txtSiglasCarrera')" value="Bisoft" readOnly /></td>
+            </tr>
+              <tr>
+                <td>C&oacute;digo</td>
+                <td><input type="text" id="txtCodigoCarrera" value="001" class="input-xlarge" onClick="editarCampo('txtCodigoCarrera')" readOnly /></td>
+              </tr>
+              <tr>
+                <td>grado</td>
+                <td><input type="text" id="txtGradoCarrera" value="Bachillerato" class="input-xlarge" onClick="editarCampo('txtGradoCarrera')" readOnly /></td>
+              </tr>
+              <tr>
+                <td>nombre</td>
+                <td><input type="text" id="txtNombreCarrera" value="bachillerato Desarrollo de Software" class="input-xlarge" onClick="editarCampo('txtNombreCarrera')" readOnly /></td>
+              </tr>
+              <tr>
+                <td>Comentarios</td>
+                <td><input type="text" id="txtCometariosCarrera" value="Comentario 1" class="input-xlarge" onClick="editarCampo('txtCometariosCarrera')" readOnly /></td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>&nbsp;</td>
+              </tr>
+              
+              </form>
+              </table>
+              <div class="submitButton">
+						<button type="submit" class="btn btn-danger" onClick="deseleccionarTodos()">Guardar</button>
+				</div>
+              
+</div>
+        <div id="footerP">
+          	<hr>Copyright Yaisoft 2012 &copy;
+</div>
+	</div>
+	-->
 </body>
 </html>

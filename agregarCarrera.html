@@ -6,7 +6,9 @@
 		<!--Fecha de última modificación: 10:05 p.m. 12/07/2012-->   
 		<link href="css/bootstrap.css" rel="stylesheet">
 		<link href="css/styleCarrera.css" rel="stylesheet">
-		<link href="css/style.css" rel="stylesheet">		
+		<link href="css/style.css" rel="stylesheet">
+
+		
 		<script type="text/javascript" src="js/validaCarrera.js"></script><!--llamada del validador de datos del formulario-->
 		<script type="text/javascript" src="js/livevalidation_standalone.js"></script><!--llamada del validador en vivo-->
 	</head>
@@ -25,8 +27,8 @@
 						<ul class="nav pull-right mantenimiento">
 							<li>
 								<a href="#"><i class="icon-wrench icon-white"></i>
-                                Mantenimiento
-                                <b class="caret"></b>
+									Mantenimiento
+									<b class="caret"></b>
 								</a>
 								<ul class="dropdown-menu"><!--Menu desplegable de mantenimiento-->
 									<li><a href="mantenimientoUsuarios.html"><i class="icon-user"></i> Usuarios</a></li>
@@ -56,7 +58,7 @@
 		<div id="headerP"> </div>
 		
 		<div class="container">
-			<form name="frmCarrera" id="frmCarrera" method="post" enctype="text/plain" class="form-horizontal">
+			<form name="frmDatos" id="frmDatos" method="post" enctype="text/plain" class="form-horizontal">
 				<fieldset>
 					<legend>Agregar carrera</legend>
 					<div name="divsiglas" id="divsiglas" class="control-group">
@@ -90,15 +92,70 @@
 						</div>
 					</div>
 					<div class="form-actions">
-						<button type="submit" name="btnIngresarCarrera" id="btnIngresarCarrera" onClick="deseleccionarTodos()" class="btn btn-primary">Ingresar</button>
+						<input type="button" name="btnSalvar" id="btnSalvar" onClick="Validar(frmDatos)" class="btn btn-primary" value="Ingresar">
 						<input type="reset" name="btnLimpiar" id="btnLimpiar" onClick="PoneCursor()" class="btn" value="Limpiar">
 					</div>
 				</fieldset>
-			</form>			
+			</form>
+			
+			
+			
 		</div>
 		
 		<div id="footerP">
 			<hr> <p> Copyright Yaisoft 2012 &copy; </p> 
 		</div>
+		<!--
+		<div id="globalP">
+		<div id="headerP"></div>
+		<div id="contentP">
+		<table id="tablaAgregarCarrera">
+		<tr>
+		<td><!--Celda Principal(contenedor del formulario)
+		<form name="frmDatos" action"#" method="post" enctype="text/plain"><!--Inicio de formulario
+		<fieldset><!--Titulo del formulario
+		<legend>Agregar Carrera</legend>
+		<br>
+		<table>
+		<tr>
+		<td>Siglas</td>
+		<td><input name="siglas" type="text" class="input-xlarge" id="txtsiglas" value=""/>
+		</td>
+		</tr>
+		<tr>
+		<td>C&oacute;digo</td>
+		<td><input type="TEXT" class="input-xlarge" id="txtcodigo" name="codigo" value=""/>
+		</td>
+		</tr>
+		<tr>
+		<td>Grado</td>
+		<td><input type="TEXT" class="input-xlarge" id="txtgrado" name="grado" value=""/>               
+		</td>
+		</tr>
+		<tr>
+		<td>Nombre</td>
+		<td><input type="TEXT" class="input-xlarge" id="txtname" name="name" value=""/>
+		</td>
+		</tr>
+		<tr>
+		<td>Comentarios</td>
+		<td><textarea name="txtcomentarios" rows="5" class="input-xlarge" id="txtcomentarios"value=""></textarea></td>
+		</tr>
+		<tr>
+		<td><input name="txtEnviar" type="button" class="btn btn-primary" onClick="Validar(frmDatos)" value="Ingresar" /><!--boton de envio de datos
+		<input name="txtLimpiar" type="reset" class="btn" onClick="PoneCursor()" value="Limpiar" /><!--boton para limpiar campos
+		</td>
+		</tr>
+		</table>
+		</fieldset>
+		</form>
+		</td><!--Fin de celda Principal(contenedor del formulario)
+		</tr>
+		</table>
+		</div>
+		<div id="footerP">
+		<hr>Copyright Yaisoft 2012 &copy;
+		</div>
+		</div>-->
 	</body>
 </html>
