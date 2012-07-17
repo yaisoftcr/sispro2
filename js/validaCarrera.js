@@ -11,3 +11,10 @@
 		               	var txtname = new LiveValidation('txtname');
            	          	txtname.add(Validate.Presence);
 }
+	
+	function deseleccionarTodos() {
+		var elem = document.getElementById('frmAgregarCarrera').elements;
+		for (var i=0; i<elem.length; i++) {
+				elem[i].readOnly = true;
+			}
+	}
