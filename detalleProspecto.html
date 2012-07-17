@@ -1,0 +1,210 @@
+<html>
+<head>
+	<title>Detalle de Prospectos</title>
+	<link rel="stylesheet"	type="text/css" href="css/tablaStyle.css"/>
+	<link rel="stylesheet"	type="text/css" href="css/bootstrap.css"/>
+	<script type="text/javascript" src="js/editarProspecto.js"></script><!--llamada del validador de datos del formulario-->
+    <script type="text/javascript" src="js/modificarDatosProspectos.js"></script><!--llamada del validador de datos del formulario-->
+	<script type="text/javascript" src="js/livevalidation_standalone.js"></script>
+	<script type="text/javascript" src="js/filterTable.js"></script>
+	<script type="text/javascript" src="js/sorttable.js"></script>
+</head>
+
+<body id = "wrap" onLoad="activarValidaciones()">
+
+	<div class="navbar">
+    	<div class="navbar-inner">
+	    	<div class="container">
+		    	<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+			    	<span class="icon-bar"></span>
+			    	<span class="icon-bar"></span>
+			    	<span class="icon-bar"></span>
+			    	</a>
+	        <a class="brand" href="#">Sistema de Administraci&oacute;n de Prospectos</a>
+            <div class="nav-collapse">
+                        <ul class="nav">
+                        </ul>
+                        <ul class="nav pull-right mantenimiento">
+                            <li>
+                                <a href="#"><i class="icon-wrench icon-white"></i>
+                                Mantenimiento
+                                <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu"><!--Menu desplegable de mantenimiento-->
+                                    <li><a href="mantenimientoUsuarios.html"><i class="icon-user"></i> Usuarios</a></li>
+                                    <li><a href="mantenimientoCarreras.html"><i class="icon-book"></i> Carreras</a></li>
+                                </ul>
+                            </li>
+                        <li><a href="mostrarAyuda.html">Ayuda</a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a href="login.html">Cerrar sesi&oacute;n jpmedrano</a></li>
+                        </ul>	    
+                    </div><!-- /.nav-collapse -->
+                </div>
+            </div><!-- /navbar-inner -->
+                            <ul class="breadcrumb"><!--barra subMenu-->
+                                <li>
+                                    <a href="inicio.html">Inicio</a> <span class="divider">/</span>
+                                </li>
+                                <li class="active">Datos del prospecto</li>
+                            </ul>
+            </div><!-- /navbar -->
+
+  				 
+  <div id = "header"> </div>
+  
+  <div class = "content">
+  	<div class = "details">
+	<table id="tablaAgregarProspect">
+						<form name="frmDatosProspecto" id="frmDatosProspecto" action"#" method="post" enctype="text/plain"><!--Inicio de formulario-->
+						<fieldset><!--Titulo del formulario-->
+						<legend>Datos de Prospecto</legend>
+                    <tr>
+						<td width="188">Nombre</td>
+						<td width="278"><input name="nombre" type="text" class="input-large" id="txtNombreProspecto" value="Adolfo" onClick="editarCampo('txtNombreProspecto')"  readOnly />
+                      </td>
+						<td width="14">&nbsp;</td>
+						<td width="176">Correo electr&oacute;nico</td>
+						<td width="296"><input name="correoElectronico" type="text" class="input-large" id="correoElectronico" value="ablanco@cenfotec.com"  onClick="editarCampo('correoElectronico')" readOnly /></td>
+					</tr>
+						<tr>
+							<td>Primer apellido</td>
+							<td>
+                            <input name="txtprimerApellidoPros" type="text" class="input-large" id="txtprimerApellidoPros" value="Blanco" onClick="editarCampo('txtprimerApellidoPros')" readOnly />
+                            </td>
+							<td>&nbsp;</td>
+							<td>Colegio de procedencia</td>
+							<td><input name="txtcolegioProcedencia" type="text" class="input-large" id="txtcolegioProcedencia" value="" onClick="editarCampo('txtcolegioProcedencia')" readonly /></td>
+						</tr>
+						<tr>
+							<td>Segundo apellido</td>
+							<td>
+                            <input name="segundoApellido" type="text" class="input-large" id="txtsegundoApellidoPros" value="Blanco" onClick="editarCampo('txtsegundoApellidoPros')" readonly="readonly"/>
+
+                            </td>
+							<td>&nbsp;</td>
+							<td>Estado del prospecto</td>
+							<td><label class="control-label" for="input01"></label>
+                              <input name="rbtEstado" type="radio" id="rbtInteresado" value="Interesado" checked/>
+&nbspInteresado&nbsp&nbsp&nbsp </td>
+						</tr>
+						<tr>
+							<td>N&uacute;mero de Identificaci&oacute;n</td>
+							<td><input name="cedula" type="text" class="input-large" id="txtcedula" value="12345678" onClick="editarCampo('txtcedula')" readonly="readonly"/>
+                            </td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td><input name="rbtEstado" type="radio" id="rbtSinInteres" value="SinInteres"/>
+&nbspSin Inter&eacute;s </td>
+						</tr>
+						<tr>
+							<td>N&uacute;mero de tel&eacute;fono</td>
+							<td><input name="numeroTelefono" type="text" class="input-large" id="txtnumeroTelefono" value="22332233" onClick="editarCampo('txtnumeroTelefono')" readonly="readonly"/>
+                            </td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td><input type="radio" id="rbtMatriculado" name="rbtEstado" value="Matriculado"/>
+&nbspMatriculado </td>
+						</tr>
+					<tr>
+						<td>N&uacute;mero de tel&eacute;fono 2</td>
+						<td><input name="numeroTelefonoO" type="text" class="input-large" id="txtnumeroTelefonoO" value="" onClick="editarCampo('txtnumeroTelefonoO')" readonly="readonly"/>
+
+                        </td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>N&uacute;mero de celular</td>
+						<td>
+                        <input name="numeroCelular" type="text" class="input-large" id="txtnumeroCelular" value="" onClick="editarCampo('txtnumeroCelular')" readonly="readonly"/></td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+                    	<td></td>
+                    </tr>
+					<tr></tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>
+						 <div class="submitButton">
+								<button type="submit" class="btn btn-danger" onClick="deseleccionarTodos()">Actualizar</button>
+							</div>
+						</td>
+					</tr>
+					</fieldset>
+                    </form>
+					</table>
+  	</div>
+  	<div id = "space"></div>
+  	<div class = "options">
+  		<div id="searchwrapper">
+      <legend>Historial de contactos</legend>
+  			<form class="well form-search">
+		 		<input type="search" class="span3" placeholder="B&uacute;squeda" name="Buscar" id="sf_filter" onKeyUp="filterTable(this, 'sf_filter')" />
+		 		<button type="submit" class="btn">Buscar</button>
+		 		<a class="btn btn-primary" href="agregarContacto.html">
+		 			<i class="icon-plus icon-white"></i>
+		 			Agregar nuevo contacto
+		 		</a>
+		 	</form>
+		</div>
+		
+  	</div>
+  <div class="theTable">
+  <table id="sf" class="table table-bordered table-striped sortable">
+  	<thead>
+		<tr>
+			<th>Fecha de contacto</th>
+			<th>Hora</th>
+			<th>Medio de comunicaci&oacute;n</th>
+			<th>    </th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>12/7/12</td>
+			<td>12:00 pm</td>
+			<td>Llamada telef&oacute;nica</td>
+			<td><a href="detalleContacto.html">Ver</a></td>
+		</tr>
+		<tr>
+			<td>12/7/12</td>
+			<td>12:00 pm</td>
+			<td>Llamada telef&oacute;nica</td>
+			<td><a href="detalleContacto.html">Ver</a></td>
+		</tr>
+		<tr>
+			<td>12/7/12</td>
+			<td>12:00 pm</td>
+			<td>Llamada telef&oacute;nica</td>
+			<td><a href="detalleContacto.html">Ver</a></td>
+		</tr>
+		<tr>
+			<td>12/7/12</td>
+			<td>12:00 pm</td>
+			<td>Llamada telef&oacute;nica</td>
+			<td><a href="detalleContacto.html">Ver</a></td>
+		</tr>
+		<tr>
+			<td>12/7/12</td>
+			<td>12:00 pm</td>
+			<td>Llamada telef&oacute;nica</td>
+			<td><a href="detalleContacto.html">Ver</a></td>
+		</tr>
+	</tbody>
+  </table>
+  </div>
+  </div> 
+  
+  <div id="footer">
+  <hr> <p> Copyright Yaisoft 2012 &copy; </p> 
+  </div>
+	
+</body>
+
+</html>

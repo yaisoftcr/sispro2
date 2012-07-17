@@ -1,0 +1,67 @@
+/*Inicio.css
+Elaborado por Yaisoft */
+
+body{
+height: 100%;
+margin: 0;
+padding: 0;
+}
+
+#header {
+margin:auto;
+width:976px;
+height:180px;
+background-color: #FFFFFF;
+background-image:url(../img/baner.png);
+background-repeat:no-repeat;
+}
+
+.content {
+padding: 50px 100px;
+}
+
+.tableFooterOptions { 
+background-color: rgb(245, 245, 245);
+height: 40px;
+border: 1px solid rgba(0, 0, 0, 0.05);
+box-shadow:0pt 1px 1px rgba(0, 0, 0, 0.05) inset;
+border-radius:4px 4px 4px 4px;	
+padding-top: 10px;
+}
+
+.tableFooterOptions h4 {
+display: inline;
+padding-left: 5px;
+margin-right: 700px;
+}
+
+.tableFooterOptions h5 {
+display: inline;
+}
+
+#tableFooterButtons {
+display: inline;
+}
+
+#tableFooterLabel {
+}
+
+#searchwrapper a{
+margin-left: 550px;
+}
+
+#searchwrapper h3 {
+display: inline;
+}
+
+.details {
+height: 200px;
+border-style: dotted;	
+}
+
+
+.theTable {
+border: 1px solid rgba(0, 0, 0, 0.05);
+margin-top: -22px;
+margin-bottom: -20px;
+}

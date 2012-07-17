@@ -1,0 +1,161 @@
+<html>
+	<head>
+		<title>Formulario Carrera</title> <!--Formulario para agregar carreras al sistema-->
+		<!--Elaborado por: Victor Perez Rodriguez-->
+		<!--Fecha de creación: 10:34 a.m. 06/07/2012-->
+		<!--Fecha de última modificación: 10:05 p.m. 12/07/2012-->   
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/styleCarrera.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+
+		
+		<script type="text/javascript" src="js/validaCarrera.js"></script><!--llamada del validador de datos del formulario-->
+		<script type="text/javascript" src="js/livevalidation_standalone.js"></script><!--llamada del validador en vivo-->
+	</head>
+	<body onLoad="activarValidaciones()">
+		<div class="navbar"><!--Barra de menu superior-->
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>
+					<a class="brand" href="#">Sistema de Administraci&oacute;n de Prospectos</a>
+					<div class="nav-collapse">
+						<ul class="nav"></ul>
+						<ul class="nav pull-right mantenimiento">
+							<li>
+								<a href="#"><i class="icon-wrench icon-white"></i>
+									Mantenimiento
+									<b class="caret"></b>
+								</a>
+								<ul class="dropdown-menu"><!--Menu desplegable de mantenimiento-->
+									<li><a href="mantenimientoUsuarios.html"><i class="icon-user"></i> Usuarios</a></li>
+									<li><a href="mantenimientoCarreras.html"><i class="icon-book"></i> Carreras</a></li>
+								</ul>
+							</li>
+							<li><a href="mostrarAyuda.html">Ayuda</a></li>
+							<li class="divider-vertical"></li>
+							<li><a href="login.html">Cerrar sesi&oacute;n jpmedrano</a></li>
+						</ul>	    
+					</div><!-- /.nav-collapse -->
+				</div>
+			</div><!-- /navbar-inner -->
+			<ul class="breadcrumb"><!--barra subMenu-->
+				<li>
+					<a href="inicio.html">Inicio</a>
+					<span class="divider">/</span>
+				</li>
+				<li>
+					<a href="mantenimientoCarreras.html">Carreras</a>
+					<span class="divider">/</span>
+				</li>
+				<li class="active">Agregar carrera</li>
+			</ul>
+		</div><!-- /navbar -->
+		
+		<div id="headerP"> </div>
+		
+		<div class="container">
+			<form name="frmDatos" id="frmDatos" method="post" enctype="text/plain" class="form-horizontal">
+				<fieldset>
+					<legend>Agregar carrera</legend>
+					<div name="divsiglas" id="divsiglas" class="control-group">
+						<label name="lblsiglas" id="lblsiglas" class="control-label">Siglas</label>
+						<div class="controls">
+							<input name="txtsiglas" id="txtsiglas" type="text" class="input-xlarge">
+						</div>
+					</div>
+					<div name="divcodigo" id="divcodigo" class="control-group">
+						<label name="lblcodigo" id="lblcodigo" class="control-label">Código</label>
+						<div class="controls">
+							<input name="txtcodigo" id="txtcodigo" type="text" class="input-xlarge">
+						</div>
+					</div>
+					<div name="divgrado" id="divgrado" class="control-group">
+						<label name="lblgrado" id="lblgrado" class="control-label">Grado</label>
+						<div class="controls">
+							<input name="txtgrado" id="txtgrado" type="text" class="input-xlarge">
+						</div>
+					</div>
+					<div name="divname" id="divname" class="control-group">
+						<label name="lblname" id="lblname" class="control-label">Nombre</label>
+						<div class="controls">
+							<input name="txtname" id="txtname" type="text" class="input-xlarge">
+						</div>
+					</div>
+					<div name="divcomentarios" id="divcomentarios" class="control-group">
+						<label name="lblcomentarios" id="lblcomentarios" class="control-label">Comentarios</label>
+						<div class="controls">
+							<textarea name="txtcomentarios" id="txtcomentarios" type="text" class="input-xlarge"></textarea>
+						</div>
+					</div>
+					<div class="form-actions">
+						<input type="button" name="btnSalvar" id="btnSalvar" onClick="Validar(frmDatos)" class="btn btn-primary" value="Ingresar">
+						<input type="reset" name="btnLimpiar" id="btnLimpiar" onClick="PoneCursor()" class="btn" value="Limpiar">
+					</div>
+				</fieldset>
+			</form>
+			
+			
+			
+		</div>
+		
+		<div id="footerP">
+			<hr> <p> Copyright Yaisoft 2012 &copy; </p> 
+		</div>
+		<!--
+		<div id="globalP">
+		<div id="headerP"></div>
+		<div id="contentP">
+		<table id="tablaAgregarCarrera">
+		<tr>
+		<td><!--Celda Principal(contenedor del formulario)
+		<form name="frmDatos" action"#" method="post" enctype="text/plain"><!--Inicio de formulario
+		<fieldset><!--Titulo del formulario
+		<legend>Agregar Carrera</legend>
+		<br>
+		<table>
+		<tr>
+		<td>Siglas</td>
+		<td><input name="siglas" type="text" class="input-xlarge" id="txtsiglas" value=""/>
+		</td>
+		</tr>
+		<tr>
+		<td>C&oacute;digo</td>
+		<td><input type="TEXT" class="input-xlarge" id="txtcodigo" name="codigo" value=""/>
+		</td>
+		</tr>
+		<tr>
+		<td>Grado</td>
+		<td><input type="TEXT" class="input-xlarge" id="txtgrado" name="grado" value=""/>               
+		</td>
+		</tr>
+		<tr>
+		<td>Nombre</td>
+		<td><input type="TEXT" class="input-xlarge" id="txtname" name="name" value=""/>
+		</td>
+		</tr>
+		<tr>
+		<td>Comentarios</td>
+		<td><textarea name="txtcomentarios" rows="5" class="input-xlarge" id="txtcomentarios"value=""></textarea></td>
+		</tr>
+		<tr>
+		<td><input name="txtEnviar" type="button" class="btn btn-primary" onClick="Validar(frmDatos)" value="Ingresar" /><!--boton de envio de datos
+		<input name="txtLimpiar" type="reset" class="btn" onClick="PoneCursor()" value="Limpiar" /><!--boton para limpiar campos
+		</td>
+		</tr>
+		</table>
+		</fieldset>
+		</form>
+		</td><!--Fin de celda Principal(contenedor del formulario)
+		</tr>
+		</table>
+		</div>
+		<div id="footerP">
+		<hr>Copyright Yaisoft 2012 &copy;
+		</div>
+		</div>-->
+	</body>
+</html>

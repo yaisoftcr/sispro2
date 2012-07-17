@@ -1,0 +1,147 @@
+<html>
+<head>
+<title>Agregar Prospecto</title> <!--Formulario para agregar Prospectos en el sistema-->
+			<!--Elaborado por: Adolfo Blanco Coto-->
+			<!--Fecha de creación: 11:14 a.m. 06/07/2012-->
+			<!--Fecha de última modificación: 12:11 p.m. 07/07/2012-->  
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <script type="text/javascript" src="js/filterTable.js"></script><!--llamada del filtro del la tabla-->
+	<script type="text/javascript" src="js/sorttable.js"></script><!--ordena campos en tabla-->
+    <script type="text/javascript" src="js/validarProspectos.js"></script><!--llamada del validador de datos del formulario-->
+    <script type="text/javascript" src="js/livevalidation_standalone.js"></script>
+</head>
+<body onLoad="activarValidaciones()">
+<div class="navbar"><!--Barra de menu superior-->
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="#">Sistema de Administraci&oacute;n de Prospectos</a>
+            <div class="nav-collapse">
+                <ul class="nav">
+                </ul>
+                <ul class="nav pull-right mantenimiento">
+                    	<li>
+                        <a href="#"><i class="icon-wrench icon-white"></i>
+                        Mantenimiento
+                        <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu"><!--Menu desplegable de mantenimiento-->
+                            <li><a href="mantenimientoUsuarios.html"><i class="icon-user"></i> Usuarios</a></li>
+                            <li><a href="mantenimientoCarreras.html"><i class="icon-book"></i> Carreras</a></li>
+                        </ul>
+                    </li>
+                <li><a href="mostrarAyuda.html">Ayuda</a></li>
+                <li class="divider-vertical"></li>
+                <li><a href="login.html">Cerrar sesi&oacute;n jpmedrano</a></li>
+                </ul>	    
+            </div><!-- /.nav-collapse -->
+        </div>
+    </div><!-- /navbar-inner -->
+    				<ul class="breadcrumb"><!--barra subMenu-->
+				    <li>
+					    <a href="inicio.html">Inicio</a> <span class="divider">/</span>
+					</li>
+				    <li class="active">Agregar Prospecto</li>
+				</ul>
+</div><!-- /navbar -->
+	<div id="globalP">
+			<div id="headerP"></div>
+				<div id="contentP">
+					<table id="tablaAgregarProspect">
+						<form name="frmDatosProspect" action"#" method="post" enctype="text/plain"><!--Inicio de formulario-->
+						<fieldset><!--Titulo del formulario-->
+						<legend>Agregar Prospecto</legend>
+                    <tr>
+						<td>
+					<tr>
+						<td>Nombre</td>
+						<td><input name="Nombre" type="text" class="input-xlarge" id="txtNombreProspecto" value=""/>
+                        </td>
+					</tr>
+						<tr>
+							<td>Primer apellido</td>
+							<td>
+                            <input type="text" class="input-xlarge" id="txtprimerApellidoPros" name="txtprimerApellidoPros" value=""/>
+                            </td>
+						</tr>
+						<tr>
+							<td>Segundo apellido</td>
+							<td>
+                            <input type="text" class="input-xlarge" id="txtsegundoApellidoPros" name="txtsegundoApellidoPros" value=""/>
+                            </td>
+						</tr>
+						<tr>
+							<td>N&uacute;mero de c&eacute;dula o pasaporte</td>
+							<td><input type="text" class="input-xlarge" id="txtcedula" name="cedula" value=""/>
+                            </td>
+						</tr>
+						<tr>
+							<td>N&uacute;mero de tel&eacute;fono</td>
+							<td><input name="txtnumeroTelefono" type="text" class="input-xlarge" id="txtnumeroTelefono" value=""/>
+                            </td>
+						</tr>
+					<tr>
+						<td>N&uacute;mero de tel&eacute;fono (adicional)</td>
+						<td><input name="txtnumeroTelefonoO" type="text" class="input-xlarge" id="txtnumeroTelefonoO" value=""/>
+                        </td>
+					</tr>
+					<tr>
+						<td>N&uacute;mero de celular</td>
+						<td><input name="txtnumeroCelular" type="text" class="input-xlarge" id="txtnumeroCelular" value=""/>
+                        </td>
+					</tr>
+					<tr>
+						<td>Correo electr&oacute;nico</td>
+						<td><input name="txtMail" type="text" class="input-xlarge" id="txtMail" value=""/>
+                        </td>
+					</tr>
+					<tr>
+						<td>Colegio de procedencia</td>
+						<td><input name="txtcolegioProcedencia" type="text" class="input-xlarge" id="txtcolegioProcedencia" value=""/></td>
+					</tr>
+                    <tr>
+                    	<td></td>
+                    </tr>
+					<tr>												
+                        <td>Estado del prospecto</td>
+                        <td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td></td>
+                        <td>
+							<label class="control-label" for="input01"></label>
+							<input type="radio" id="rbtInteresado" name="rbtEstado" value="Interesado"/>&nbspInteresado&nbsp&nbsp&nbsp
+						<tr>
+                        	<td></td>
+                            <td>
+                                <input type="radio" id="rbtSinInteres" name="rbtEstado" value="SinInteres"/>&nbspSin Inter&eacute;s
+                            </td>
+						</tr>
+                         <tr>
+                        	<td>&nbsp;</td>
+                         </tr>
+					<tr>
+ 					<td>Comentarios</td>
+						<td><textarea name="txtcomentarios" rows="5" class="input-xlarge" id="txtcomentarios"value=""></textarea></td>
+					</tr>
+					<tr>
+						<td><input name="txtEnviar" type="button" class="btn btn-primary" onClick="Validar(frmDatos)" value="Ingresar" /><!--boton de envio de datos-->
+							<input name="txtLimpiar" type="reset" class="btn" onClick="PoneCursor()" value="Limpiar" /><!--boton para limpiar campos-->
+						</td>
+						</tr>
+					</fieldset>
+                    </form>
+					</table>
+		  </div>
+			<div id="footerP">
+            <hr>Copyright Yaisoft 2012 &copy;
+		</div>
+    </div>
+</body>
+</html>

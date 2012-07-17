@@ -1,0 +1,138 @@
+<html>
+<head>
+	<title> Mantenimiento de carreras </title>
+	<link rel="stylesheet"	type="text/css" href="css/inicioStyle.css"/>
+	<link rel="stylesheet"	type="text/css" href="css/bootstrap.css"/>
+		<link rel="stylesheet"	type="text/css" href="css/style.css"/>
+
+	
+	<script type="text/javascript" src="js/filterTable.js"></script>
+	<script type="text/javascript" src="js/sorttable.js"></script>
+	
+</head>
+
+<body id = "wrap">
+
+<div class="navbar"><!--Barra de menu superior-->
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="#">Sistema de Administraci&oacute;n de Prospectos</a>
+            <div class="nav-collapse">
+                <ul class="nav">
+                </ul>
+                <ul class="nav pull-right mantenimiento">
+                    	<li>
+                        <a href="#"><i class="icon-wrench icon-white"></i>
+                        Mantenimiento
+                        <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu"><!--Menu desplegable de mantenimiento-->
+                            <li><a href="mantenimientoUsuarios.html"><i class="icon-user"></i> Usuarios</a></li>
+                            <li><a href="mantenimientoCarreras.html"><i class="icon-book"></i> Carreras</a></li>
+                        </ul>
+                    </li>
+                <li><a href="mostrarAyuda.html">Ayuda</a></li>
+                <li class="divider-vertical"></li>
+                <li><a href="login.html">Cerrar sesi&oacute;n jpmedrano</a></li>
+                </ul>	    
+            </div><!-- /.nav-collapse -->
+        </div>
+    </div><!-- /navbar-inner -->
+    				<ul class="breadcrumb"><!--barra subMenu-->
+				    <li>
+					    <a href="inicio.html">Inicio</a> <span class="divider">/</span>
+					</li>
+				    <li class="active">Carreras</li>
+					</li>
+				</ul>
+</div><!-- /navbar -->
+
+  				 
+  <div id = "header"> </div>
+  
+  <div class = "content">
+  	<div class = "options">
+  		<div id="searchwrapper">
+  			<form class="well form-search">
+		 		<input type="search" class="span3" placeholder="B&uacute;squeda" name="Buscar" id="sf_filter" onKeyUp="filterTable(this, 'sf_filter')" />
+		 		<button type="submit" class="btn">Buscar</button>
+		 		<a class="btn btn-primary" href="agregarCarrera.html">
+		 			<i class="icon-plus icon-white"></i>
+		 			Agregar nueva carrera
+		 		</a>
+		 	</form>
+		</div>
+		
+  	</div>
+  <div class="theTable">
+  <table id="sf" class="table table-bordered table-striped sortable">
+  	<thead>
+		<tr>
+			<th>Siglas</th>
+			<th>Grado acad&eacute;mico</th>
+			<th>Nombre</th>
+			<th>Aprobada por Conesup</th>
+			<th>    </th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1234</td>
+			<td>T&eacute;cnico</td>
+			<td>Desarrollo de Software</td>
+			<td>No</td>
+			<td><a href="detalleCarrera.html">Ver</a></td>
+		</tr>
+		<tr>
+			<td>1234</td>
+			<td>Diplomado</td>
+			<td>Desarrollo de Software</td>
+			<td>No</td>
+			<td><a href="detalleCarrera.html">Ver</a></td>
+		</tr>
+		<tr>
+			<td>1234</td>
+			<td>Bachillerato</td>
+			<td>Ingenier&iacute;a en Desarrollo de Software</td>
+			<td>Si</td>
+			<td><a href="detalleCarrera.html">Ver</a></td>
+		</tr>
+		<tr>
+			<td>1234</td>
+			<td>T&eacute;cnico</td>
+			<td>Telem&aacute;tica</td>
+			<td>No</td>
+			<td><a href="detalleCarrera.html">Ver</a></td>
+		</tr>
+		<tr>
+			<td>1234</td>
+			<td>Diplomado</td>
+			<td>Telem&aacute;tica</td>
+			<td>No</td>
+			<td><a href="detalleCarrera.html">Ver</a></td>
+		</tr>
+		<tr>
+			<td>1234</td>
+			<td>Maestr&iacute;a</td>
+			<td>Bases de datos</td>
+			<td>Si</td>
+			<td><a href="detalleCarrera.html">Ver</a></td>
+		</tr>
+	</tbody>
+  </table>
+  </div>
+  </div>
+ <div id = "footerP">
+  <hr> <p> Copyright Yaisoft 2012 &copy; </p> 
+  </div>
+	
+	
+</body>
+
+
+</html>

@@ -1,0 +1,156 @@
+<html>
+	<head>
+		<title>Detalle de Carrera</title> <!--Formulario para modificar carreras del sistema-->
+		<!--Elaborado por: Victor Perez Rodriguez-->
+		<!--Fecha de creación: 10:34 a.m. 06/07/2012-->
+		<!--Fecha de última modificación: 10:05 p.m. 12/07/2012-->   
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/styleCarrera.css" rel="stylesheet">
+		<link href="css/inicioStyle.css" rel="stylesheet">
+
+		<script type="text/javascript" src="js/bootstrap-dropdown.js"></script>
+		<script type="text/javascript" src="js/modificarDatosCarrera.js"></script><!--llamada del validador de datos del formulario-->
+		<script type="text/javascript" src="js/editarCarrera.js"></script><!--llamada del validador de datos del formulario-->
+		<script type="text/javascript" src="js/livevalidation_standalone.js"></script><!--llamada del validador en vivo-->
+	</head>
+	<body onLoad="activarValidaciones()">
+		<div class="navbar"><!--Barra de menu superior-->
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>
+					<a class="brand" href="#">Sistema de Administraci&oacute;n de Prospectos</a>
+					<div class="nav-collapse">
+						<ul class="nav"></ul>
+						<ul class="nav pull-right mantenimiento">
+							<li>
+								<a href="#"><i class="icon-wrench icon-white"></i>Mantenimiento<b class="caret"></b></a>
+								<ul class="dropdown-menu"><!--Menu desplegable de mantenimiento-->
+								<li><a href="mantenimientoUsuarios.html"><i class="icon-user"></i> Usuarios</a></li>
+								<li><a href="mantenimientoCarreras.html"><i class="icon-book"></i> Carreras</a></li>
+							</ul>
+							</li>
+							<li><a href="mostrarAyuda.html">Ayuda</a></li>
+							<li class="divider-vertical"></li>
+							<li><a href="login.html">Cerrar sesi&oacute;n jpmedrano</a></li>
+						</ul>	    
+					</div><!-- /.nav-collapse -->
+				</div>
+			</div><!-- /navbar-inner -->
+			<ul class="breadcrumb"><!--barra subMenu-->
+			<li>
+			<a href="inicio.html">Inicio</a> <span class="divider">/</span>
+			</li>
+			<li>
+			<a href="mantenimientoCarreras.html">Carreras</a> <span class="divider">/</span>
+			</li>
+			<li class="active">Detalle de carrera</li>
+			</ul>
+		</div><!-- /navbar -->
+
+
+        <div id="headerP"></div>
+		
+		<div class="container">
+			<form name="frmCarrera" id="frmCarrera" method="post" enctype="text/plain" class="form-horizontal">
+				<fieldset>
+					<legend>Datos de carrera</legend>
+					<div name="divsiglas" id="divsiglas" class="control-group">
+						<label name="lblsiglas" id="lblsiglas" class="control-label">Siglas</label>
+						<div class="controls">
+							<input type="text" class="input-xlarge" id="txtSiglasCarrera" onClick="editarCampo('txtSiglasCarrera')" value="Bisoft" readOnly />
+						</div>
+					</div>
+					<div name="divcodigo" id="divcodigo" class="control-group">
+						<label name="lblcodigo" id="lblcodigo" class="control-label">Código</label>
+						<div class="controls">
+							<input type="text" id="txtCodigoCarrera" value="001" class="input-xlarge" onClick="editarCampo('txtCodigoCarrera')" readOnly />
+						</div>
+					</div>
+					<div name="divgrado" id="divgrado" class="control-group">
+						<label name="lblgrado" id="lblgrado" class="control-label">Grado</label>
+						<div class="controls">
+							<td><input type="text" id="txtGradoCarrera" value="Bachillerato" class="input-xlarge" onClick="editarCampo('txtGradoCarrera')" readOnly />
+						</div>
+					</div>
+					<div name="divname" id="divname" class="control-group">
+						<label name="lblname" id="lblname" class="control-label">Nombre</label>
+						<div class="controls">
+							<input type="text" id="txtNombreCarrera" value="bachillerato Desarrollo de Software" class="input-xlarge" onClick="editarCampo('txtNombreCarrera')" readOnly />
+						</div>
+					</div>
+					<div name="divcomentarios" id="divcomentarios" class="control-group">
+						<label name="lblcomentarios" id="lblcomentarios" class="control-label">Comentarios</label>
+						<div class="controls">
+							<input type="text" id="txtCometariosCarrera" value="Comentario 1" class="input-xlarge" onClick="editarCampo('txtCometariosCarrera')" readOnly />
+						</div>
+					</div>
+					<div class="form-actions">
+						<input type="button" name="btnSalvar" id="btnSalvar" onClick="deseleccionarTodos()" class="btn btn-danger" value="Actualizar">
+					</div>
+				</fieldset>
+			</form>
+			
+		</div>
+		
+		  
+  <div id="footerP">
+  <hr> <p> Copyright Yaisoft 2012 &copy; </p> 
+  </div>
+	
+
+
+<!--
+<div id="globalP">
+        <div id="headerP">
+		</div>
+    	<div id="contentP">
+        <table id="tablaDetalleCarrera">
+        <legend>Detalle de Carrera</legend>
+        <form name="frmCarrera" id="frmCarrera" action"#" method="POST" enctype="TEXT/PLAIN">
+          <tr>
+            <td >Siglas</td>
+            <td ><input type="text" class="input-xlarge" id="txtSiglasCarrera" onClick="editarCampo('txtSiglasCarrera')" value="Bisoft" readOnly /></td>
+            </tr>
+              <tr>
+                <td>C&oacute;digo</td>
+                <td><input type="text" id="txtCodigoCarrera" value="001" class="input-xlarge" onClick="editarCampo('txtCodigoCarrera')" readOnly /></td>
+              </tr>
+              <tr>
+                <td>grado</td>
+                <td><input type="text" id="txtGradoCarrera" value="Bachillerato" class="input-xlarge" onClick="editarCampo('txtGradoCarrera')" readOnly /></td>
+              </tr>
+              <tr>
+                <td>nombre</td>
+                <td><input type="text" id="txtNombreCarrera" value="bachillerato Desarrollo de Software" class="input-xlarge" onClick="editarCampo('txtNombreCarrera')" readOnly /></td>
+              </tr>
+              <tr>
+                <td>Comentarios</td>
+                <td><input type="text" id="txtCometariosCarrera" value="Comentario 1" class="input-xlarge" onClick="editarCampo('txtCometariosCarrera')" readOnly /></td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>&nbsp;</td>
+              </tr>
+              
+              </form>
+              </table>
+              <div class="submitButton">
+						<button type="submit" class="btn btn-danger" onClick="deseleccionarTodos()">Guardar</button>
+				</div>
+              
+</div>
+        <div id="footerP">
+          	<hr>Copyright Yaisoft 2012 &copy;
+</div>
+	</div>
+	-->
+</body>
+</html>

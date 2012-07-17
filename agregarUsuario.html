@@ -1,0 +1,126 @@
+<html>
+	<head>
+		<title>Agregar Usuario</title>
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/bootstrap-responsive.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<script type="text/javascript" src="js/livevalidation_standalone.js"></script>
+		<script type="text/javascript" src="js/validaUsuario.js"></script>
+		<script type="text/javascript" src="js/validacionesUsuarios.js"></script>
+		<!--Elaborado por: Dennis Hernández Vargas, Creación: 4/7/2012 7:00p.m. Ultima modificación: 11:24 p.m.-->
+	</head>
+	<body onLoad = "activarValidaciones()">
+		<div class="navbar"><!--Barra de menu superior-->
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="#">Sistema de Administraci&oacute;n de Prospectos</a>
+            <div class="nav-collapse">
+                <ul class="nav">
+                </ul>
+                <ul class="nav pull-right mantenimiento">
+                    	<li>
+                        <a href="#"><i class="icon-wrench icon-white"></i>
+                        Mantenimiento
+                        <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu"><!--Menu desplegable de mantenimiento-->
+                            <li><a href="mantenimientoUsuarios.html"><i class="icon-user"></i> Usuarios</a></li>
+                            <li><a href="mantenimientoCarreras.html"><i class="icon-book"></i> Carreras</a></li>
+                        </ul>
+                    </li>
+                <li><a href="mostrarAyuda.html">Ayuda</a></li>
+                <li class="divider-vertical"></li>
+                <li><a href="login.html">Cerrar sesi&oacute;n jpmedrano</a></li>
+                </ul>	    
+            </div><!-- /.nav-collapse -->
+        </div>
+    </div><!-- /navbar-inner -->
+    				<ul class="breadcrumb"><!--barra subMenu-->
+				    <li>
+					    <a href="inicio.html">Inicio</a> <span class="divider">/</span>
+					</li>
+					<li>
+					    <a href="mantenimientoUsuarios.html">Usuarios</a> <span class="divider">/</span>
+					</li>
+				    <li class="active">Formulario de usuario</li>
+				</ul>
+</div><!-- /navbar -->
+        
+			<div id="headerP"></div>
+			
+			
+		<div class="container">
+			<form name="frmAgregarUsuario" id="frmAgregarUsuario" method="post" enctype="text/plain" class="form-horizontal">
+				<fieldset>
+					<legend>Agregar Usuario</legend>
+					<div name="divsiglas" id="divsiglas" class="control-group">
+						<label name="lblsiglas" id="lblsiglas" class="control-label">Nombre</label>
+						<div class="controls">
+							<input type="text" id="txtNombre" name="txtNombre" class="input-xlarge" />
+						</div>
+					</div>
+					<div name="divcodigo" id="divcodigo" class="control-group">
+						<label name="lblcodigo" id="lblcodigo" class="control-label">Primer apellido</label>
+						<div class="controls">
+							<input type="text" id="txtPrimerApellido" name="txtPrimerApellido" class="input-xlarge" />
+						</div>
+					</div>
+					<div name="divgrado" id="divgrado" class="control-group">
+						<label name="lblgrado" id="lblgrado" class="control-label">Segundo apellido</label>
+						<div class="controls">
+						<input type="text" id="txtSegundoApellido" name="txtSegundoApellido" class="input-xlarge" />
+						</div>
+					</div>
+					<div name="divname" id="divname" class="control-group">
+						<label name="lblname" id="lblname" class="control-label">Numero de cedula</label>
+						<div class="controls">
+						<input type="text" id="txtNumCedula" name="txtNumCedula" class="input-xlarge" />
+						</div>
+					</div>
+					<div name="divname" id="divname" class="control-group">
+						<label name="lblname" id="lblname" class="control-label">Nombre de usuario</label>
+						<div class="controls">
+						<input type="text" id="txtUsuario" name="txtUsuario" class="input-xlarge"/>
+						</div>
+					</div>
+					<div name="divname" id="divname" class="control-group">
+						<label name="lblname" id="lblname" class="control-label">Contraseña</label>
+						<div class="controls">
+						<input type="password" id="pwdClave" name="pwdClave" class="input-xlarge" />
+						</div>
+					</div>
+					<div name="divname" id="divname" class="control-group">
+						<label name="lblname" id="lblname" class="control-label">Confirma contraseña</label>
+						<div class="controls">
+						<input type="password" id="pwdConfirmClave" name="pwdConfirmClave" class="input-xlarge" />
+						</div>
+					</div>
+					<div name="divname" id="divname" class="control-group">
+						<label name="lblname" id="lblname" class="control-label">Rol</label>
+						<div class="controls">
+							<label class="radio">
+								<input type="radio" id="rbtAdmin" name="rbtRol" value="Administrador"/>
+								Administrador
+							</label>
+							<label class="radio">
+								<input type="radio" id="rbtUsuario" name="rbtRol" value="Usuario"/>
+								Usuario
+							</label>
+					</div>
+					<div class="form-actions">
+						<input type="button" name="btnSalvar" id="btnSalvar" onclick="Validar(frmAgregarUsuario)" class="btn btn-primary" value="Ingresar">
+						<input type="reset" name="btnLimpiar" id="btnLimpiar" onclick="PoneCursor()" class="btn" value="Limpiar">
+					</div>
+				</fieldset>
+			</form>		
+		</div>
+		<div id = "footerP">
+			<hr> Copyright Yaisoft 2012 &copy;
+		</div>
+	</body>
+</html>

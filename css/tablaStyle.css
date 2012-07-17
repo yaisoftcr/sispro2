@@ -1,0 +1,120 @@
+/*Inicio.css
+Elaborado por Yaisoft */
+
+body{
+height: 100%;
+margin: 0;
+padding: 0;
+}
+
+#header {
+margin:auto;
+width:976px;
+height:180px;
+background-color: #FFFFFF;
+background-image:url(../img/baner.png);
+background-repeat:no-repeat;
+}
+
+.content {
+	margin:auto;
+	width:976px;
+	padding: 0px 100px;
+}
+
+#footer {
+	margin:auto;
+	clear: both;
+	height:100px;
+	width:976px;
+	text-align:right;
+}
+
+#searchwrapper a{
+margin-left: 550px;
+}
+
+#searchwrapper h3 {
+display: inline;
+}
+
+.theTable {
+margin-top: -22px;
+}
+.details{
+	width:976px;
+}
+#tablaDatosProspecto{
+	width:976px;
+}
+.mantenimiento li a{
+	color:#000;
+	text-decoration:none;
+	display:;
+}
+.mantenimiento li a:hover {
+	background-color:#999;
+}
+.mantenimiento > li {
+	float:left;
+}
+.mantenimiento li ul {
+	display:none;
+	position: absolute;
+	min-width:100px;
+	margin:0 250px 0 0;	
+}
+.mantenimiento li:hover > ul{
+	display:block;
+}
+
+.mateniento li ul li{
+	position:relative;
+}
+.mantenimiento li ul li ul{
+	right:-140px;
+	top:0;
+}
+
+.options {
+	margin-top: 40px;
+}
+
+
+.LV_validation_message{
+    font-weight:bold;
+    margin:0 0 0 5px;
+}
+
+.LV_valid {
+    color:#00CC00;
+}
+	
+.LV_invalid {
+    color:#CC0000;
+}
+    
+.LV_valid_field,
+input.LV_valid_field:hover, 
+input.LV_valid_field:active,
+textarea.LV_valid_field:hover, 
+textarea.LV_valid_field:active {
+    border: 1px solid #00CC00;
+}
+    
+.LV_invalid_field, 
+input.LV_invalid_field:hover, 
+input.LV_invalid_field:active,
+textarea.LV_invalid_field:hover, 
+textarea.LV_invalid_field:active {
+    border: 1px solid #CC0000;
+}
+legend{
+	text-align:right;
+}
+
+
+
+
+
+
