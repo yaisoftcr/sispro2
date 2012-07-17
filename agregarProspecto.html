@@ -108,30 +108,12 @@
                     <tr>
                     	<td></td>
                     </tr>
-					<tr>												
-                        <td>Estado del prospecto</td>
-                        <td>&nbsp;</td>
-					</tr>
-					<tr>
-						<td></td>
-                        <td>
-							<label class="control-label" for="input01"></label>
-							<input type="radio" id="rbtInteresado" name="rbtEstado" value="Interesado"/>&nbspInteresado&nbsp&nbsp&nbsp
-						<tr>
-                        	<td></td>
-                            <td>
-                                <input type="radio" id="rbtSinInteres" name="rbtEstado" value="SinInteres"/>&nbspSin Inter&eacute;s
-                            </td>
-						</tr>
-                         <tr>
-                        	<td>&nbsp;</td>
-                         </tr>
 					<tr>
  					<td>Comentarios</td>
 						<td><textarea name="txtcomentarios" rows="5" class="input-xlarge" id="txtcomentarios"value=""></textarea></td>
 					</tr>
 					<tr>
-						<td><input name="txtEnviar" type="button" class="btn btn-primary" onClick="Validar(frmDatos)" value="Ingresar" /><!--boton de envio de datos-->
+						<td><button type="button" name="txtEnviar" class="btn btn-primary" onClick="deseleccionarTodos()">Ingresar</button><!--boton de envio de datos-->
 							<input name="txtLimpiar" type="reset" class="btn" onClick="PoneCursor()" value="Limpiar" /><!--boton para limpiar campos-->
 						</td>
 						</tr>
